@@ -1,0 +1,11 @@
+de\finn\friendgui\listener\FriendInvSettings.class
+de\finn\friendgui\FriendGUI.class
+de\finn\friendgui\objects\ItemBuilder.class
+de\finn\friendgui\listener\FriendInvSettings$1.class
+de\finn\friendgui\listener\FriendRequestListener.class
+de\finn\friendgui\listener\FriendInvListener.class
+de\finn\friendgui\enums\FriendEnum.class
+de\finn\friendgui\database\MongoPlayer.class
+de\finn\friendgui\listener\FriendRequestListener$1.class
+de\finn\friendgui\database\MongoManager.class
+de\finn\friendgui\objects\CustomHeads.class
