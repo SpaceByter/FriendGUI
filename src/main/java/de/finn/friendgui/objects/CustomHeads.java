@@ -33,10 +33,16 @@ public class CustomHeads {
         this.name = name;
     }
     
+    /**
+     * 
+     * @param lore is the lore of the item
+     * @return the skull itemstack
+     */
+    //<editor-fold defaultstate="collapsed" desc="createCustomSkull">
     public ItemStack createCustomSkull(String... lore) {
         ItemStack head = new ItemStack(Material.SKULL_ITEM, 1, (short)3);
         if (this.url.isEmpty())
-          return head;
+            return head;
         
         SkullMeta headMeta = (SkullMeta)head.getItemMeta();
         headMeta.setDisplayName(ChatColor.translateAlternateColorCodes('&', this.name));
@@ -50,11 +56,18 @@ public class CustomHeads {
             profileField.set(headMeta, profile);
         } catch (IllegalArgumentException|NoSuchFieldException|SecurityException|IllegalAccessException error) {
             error.printStackTrace();
-        } 
+        }
         head.setItemMeta((ItemMeta)headMeta);
         return head;
     }
+    //</editor-fold>
     
+    /**
+     * 
+     * @param player is the player you want the texture from
+     * @return texture value
+     */
+    //<editor-fold defaultstate="collapsed" desc="getSkinValue">
     public static String getSkinValue(Player player) {
         CraftPlayer craftPlayer = (CraftPlayer)player;
         GameProfile gameProfile = craftPlayer.getProfile();
@@ -62,4 +75,5 @@ public class CustomHeads {
         Property prop = iterator.next();
         return prop.getValue();
     }
+    //</editor-fold>
 }

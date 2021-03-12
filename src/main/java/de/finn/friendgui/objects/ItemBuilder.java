@@ -40,34 +40,40 @@ public class ItemBuilder {
         this.itemStack.setItemMeta( this.itemMeta );
         return this;
     }
+    
     public ItemBuilder setLore(String ... lore) {
         this.itemMeta = this.itemStack.getItemMeta();
         this.itemMeta.setLore( Arrays.asList(lore) );
         this.itemStack.setItemMeta( this.itemMeta );
         return this;
     }
+    
     public ItemBuilder setSkullOwner( String owner ) {
         this.skullMeta = ( SkullMeta ) this.itemStack.getItemMeta();
         this.skullMeta.setOwner( owner );
         this.itemStack.setItemMeta( this.skullMeta );
         return this;
     }
+    
     public ItemBuilder setShort( Short s ) {
         this.itemStack.setDurability( s );
         return this;
     }
+    
     public ItemBuilder addEnchantment(Enchantment enchantment, int value ){
         this.itemMeta = this.itemStack.getItemMeta();
         this.itemMeta.addEnchant( enchantment, value, true );
         this.itemStack.setItemMeta( this.itemMeta );
         return this;
     }
+    
     public ItemBuilder setLeatherColor( Color color ) {
         this.leatherArmorMeta = ( LeatherArmorMeta ) this.itemStack.getItemMeta();
         this.leatherArmorMeta.setColor( color );
         this.itemStack.setItemMeta( this.leatherArmorMeta );
         return this;
     }
+    
     public ItemStack getItemStack () {
         return itemStack;
     }
